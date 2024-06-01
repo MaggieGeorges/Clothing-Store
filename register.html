@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="Auth.css">
+</head>
+<body>
+  <div class="container">
+    <div class="signin-signup">
+      <form id="registerForm" class="sign-up-form">
+        <h2 class="title">Sign Up</h2>
+        <p>Already a Member? <a href="login.html">Login</a>.</p>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input id="registerUsername" type="text" placeholder="Username">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input id="registerEmail" type="email" placeholder="Email">
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input id="registerPassword" type="password" placeholder="Password">
+        </div>
+        <input type="submit" value="Sign Up" class="btn">
+        <p class="social-text">Or Log In with Google or Email below</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </form>
+      <span class="close-btn">X</span>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

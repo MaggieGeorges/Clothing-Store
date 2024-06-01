@@ -1,0 +1,257 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "testuser",
+      "password": "testpass"
+    },
+    {
+      "id": "56b5",
+      "username": "Caroline Wangui",
+      "email": "caro254@gmail.com",
+      "password": "mburucarol254"
+    }
+  ],
+  "orders": [
+    {
+      "id": "383e",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 610,
+      "items": [
+        {
+          "id": "WETYUJ",
+          "item": 3
+        },
+        {
+          "id": "xzdsxdfgh",
+          "item": 1
+        },
+        {
+          "id": "suioklmn",
+          "item": 2
+        },
+        {
+          "id": "bnmazxsqw",
+          "item": 4
+        },
+        {
+          "id": "asduwygb",
+          "item": 4
+        },
+        {
+          "id": "ertyuihjjk",
+          "item": 1
+        }
+      ]
+    },
+    {
+      "id": "c0b9",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 1690,
+      "items": [
+        {
+          "id": "qWERTYU",
+          "item": 4
+        },
+        {
+          "id": "mzfghjk",
+          "item": 2
+        },
+        {
+          "id": "WETYUJ",
+          "item": 1
+        },
+        {
+          "id": "asduwygb",
+          "item": 4
+        },
+        {
+          "id": "bnmazxsqw",
+          "item": 4
+        },
+        {
+          "id": "ertyuihjjk",
+          "item": 4
+        }
+      ]
+    },
+    {
+      "id": "b912",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 125,
+      "items": [
+        {
+          "id": "mzfghjk",
+          "item": 5
+        }
+      ]
+    },
+    {
+      "id": "a06e",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 125,
+      "items": [
+        {
+          "id": "bnmazxsqw",
+          "item": 5
+        }
+      ]
+    },
+    {
+      "id": "a7e1",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 100,
+      "items": [
+        {
+          "id": "mzfghjk",
+          "item": 4
+        }
+      ]
+    },
+    {
+      "id": "8290",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 660,
+      "items": [
+        {
+          "id": "WETYUJ",
+          "item": 4
+        },
+        {
+          "id": "asduwygb",
+          "item": 2
+        },
+        {
+          "id": "xzdsxdfgh",
+          "item": 2
+        },
+        {
+          "id": "suioklmn",
+          "item": 1
+        },
+        {
+          "id": "bnmazxsqw",
+          "item": 3
+        },
+        {
+          "id": "ertyuihjjk",
+          "item": 1
+        }
+      ]
+    },
+    {
+      "id": "9d4d",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 340,
+      "items": [
+        {
+          "id": "xzdsxdfgh",
+          "item": 2
+        },
+        {
+          "id": "WETYUJ",
+          "item": 2
+        },
+        {
+          "id": "mzfghjk",
+          "item": 2
+        }
+      ]
+    },
+    {
+      "id": "4dea",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 170,
+      "items": [
+        {
+          "id": "xzdsxdfgh",
+          "item": 1
+        },
+        {
+          "id": "mzfghjk",
+          "item": 5
+        }
+      ]
+    },
+    {
+      "id": "22fa",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 315,
+      "items": [
+        {
+          "id": "asduwygb",
+          "item": 4
+        },
+        {
+          "id": "suioklmn",
+          "item": 3
+        },
+        {
+          "id": "bnmazxsqw",
+          "item": 3
+        },
+        {
+          "id": "ertyuihjjk",
+          "item": 4
+        }
+      ]
+    },
+    {
+      "id": "9c3f",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 500,
+      "items": [
+        {
+          "id": "WETYUJ",
+          "item": 5
+        }
+      ]
+    },
+    {
+      "id": "87e1",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 135,
+      "items": [
+        {
+          "id": "xzdsxdfgh",
+          "item": 3
+        }
+      ]
+    },
+    {
+      "id": "b661",
+      "userId": "56b5",
+      "username": "Caroline Wangui",
+      "total": 1125,
+      "items": [
+        {
+          "id": "xzdsxdfgh",
+          "item": 5
+        },
+        {
+          "id": "WETYUJ",
+          "item": 2
+        },
+        {
+          "id": "mzfghjk",
+          "item": 4
+        },
+        {
+          "id": "qWERTYU",
+          "item": 2
+        }
+      ]
+    }
+  ]
+}
