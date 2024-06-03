@@ -13,7 +13,7 @@ interface BasketItem {
     item: number;
 }
 
-let basket: BasketItem[] = []; 
+let basket: BasketItem[] = JSON.parse(localStorage.getItem("data") || "[]"); 
 
  export const fetchShopItemsData = async (): Promise<Product[]> => {
     const response = await fetch('/data.json');

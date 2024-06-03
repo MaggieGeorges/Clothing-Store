@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { shopItemsData } from './data.js';
-let basket = [];
+let basket = JSON.parse(localStorage.getItem("data") || "[]");
 export const fetchShopItemsData = () => __awaiter(void 0, void 0, void 0, function* () {
     const response = yield fetch('/data.json');
     const data = yield response.json();

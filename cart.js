@@ -1,4 +1,4 @@
-const shopItemsData = require('./data.js').default;
+import { shopItemsData } from './data.js';
 class Cart {
     constructor(labelId, shoppingCartId, shopItemsData) {
         this.labelElement = document.getElementById(labelId);
@@ -11,7 +11,18 @@ class Cart {
         this.calculation();
         this.generateCartItems();
         this.totalAmount();
+        this.attachEventListeners();
         return this;
+    }
+    attachEventListeners() {
+        const clearCartButton = document.querySelector('.removeAll');
+        const checkoutButton = document.querySelector('.checkout');
+        if (clearCartButton) {
+            clearCartButton.addEventListener('click', () => this.clearCart());
+        }
+        if (checkoutButton) {
+            checkoutButton.addEventListener('click', () => this.checkout());
+        }
     }
     saveBasket() {
         localStorage.setItem("data", JSON.stringify(this.basket));
@@ -39,18 +50,39 @@ class Cart {
                                     <p>${name}</p>
                                     <p class="cart-item-price">$ ${price}</p>
                                 </h4>
-                                <i onclick="cart.removeItem('${id}')" class="bi bi-x-lg"></i>
+                                <i class="bi bi-x-lg" data-id="${id}" data-action="remove"></i>
                             </div>
                             <div class="buttons">
-                                <i onclick="cart.decrement('${id}')" class="bi bi-dash-lg"></i>
+                                <i class="bi bi-dash-lg" data-id="${id}" data-action="decrement"></i>
                                 <div id="${id}" class="quantity">${item}</div>
-                                <i onclick="cart.increment('${id}')" class="bi bi-plus-lg"></i>
+                                <i class="bi bi-plus-lg" data-id="${id}" data-action="increment"></i>
                             </div>
                             <h3>$ ${item * price}</h3>
                         </div>
                     </div>
                 `;
             }).join("");
+            // Attach event listeners
+            this.shoppingCartElement.querySelectorAll('[data-action]').forEach(element => {
+                element.addEventListener('click', (event) => {
+                    const target = event.target;
+                    const id = target.getAttribute('data-id');
+                    const action = target.getAttribute('data-action');
+                    if (id && action) {
+                        switch (action) {
+                            case 'remove':
+                                this.removeItem(id);
+                                break;
+                            case 'decrement':
+                                this.decrement(id);
+                                break;
+                            case 'increment':
+                                this.increment(id);
+                                break;
+                        }
+                    }
+                });
+            });
         }
         else if (this.shoppingCartElement && this.labelElement) {
             this.shoppingCartElement.innerHTML = ``;
@@ -99,7 +131,7 @@ class Cart {
     }
     clearCart() {
         this.basket = [];
-        return this.saveBasket().generateCartItems().totalAmount();
+        return this.saveBasket().generateCartItems().calculation().totalAmount();
     }
     totalAmount() {
         if (this.basket.length !== 0 && this.labelElement) {
@@ -110,8 +142,8 @@ class Cart {
             }).reduce((x, y) => x + y, 0);
             this.labelElement.innerHTML = `
                 <h2>Total Bill : $ ${amount}</h2>
-                <button class="checkout" onclick="cart.checkout()">Checkout</button>
-                <button onclick="cart.clearCart()" class="removeAll">Clear Cart</button>
+                <button class="checkout">Checkout</button>
+                <button class="removeAll">Clear Cart</button>
             `;
         }
         else if (this.labelElement) {
