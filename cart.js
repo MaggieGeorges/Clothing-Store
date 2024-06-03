@@ -1,3 +1,4 @@
+// const shopItemsData = require('./data.js').default;
 import { shopItemsData } from './data.js';
 class Cart {
     constructor(labelId, shoppingCartId, shopItemsData) {

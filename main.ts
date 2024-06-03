@@ -26,7 +26,7 @@ class Shop {
     private shopItemsData: Product[];
     private basket: BasketItem[];
 
-    constructor(shopElementId: string, shopItemsData: Product[], basket: BasketItem[]) {
+    private constructor(shopElementId: string, shopItemsData: Product[], basket: BasketItem[]) {
         this.shopElement = document.getElementById(shopElementId) as HTMLElement;
         this.shopItemsData = shopItemsData;
         this.basket = basket;
